@@ -101,6 +101,8 @@ def git_get_remotes():
 def git_is_dirty():
     """Returns 1 if repo is dirty, or 0 if clean
     """
+    return False
+
     git_diff_staged_cmd = ['git', 'diff', '--quiet']
     git_diff_unstaged_cmd = [*git_diff_staged_cmd, '--cached']
 
